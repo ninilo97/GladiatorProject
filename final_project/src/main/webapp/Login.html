@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>LOGIN FORM</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	
+</script>
+<script>
+	$(document)
+			.ready(
+					function() {
+
+						$('#password')
+								.keyup(
+										function() {
+											$('#result')
+													.html(
+															checkStrength($(
+																	'#password')
+																	.val()))
+										})
+
+						function checkStrength(password) {
+							var strength = 0
+							if (password.length < 6) {
+								$('#result').removeClass()
+								$('#result').addClass('short')
+								return 'Too short'
+							}
+
+							if (password.length > 7)
+								strength += 1
+
+							if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/))
+								strength += 1
+							if (password.match(/([a-zA-Z])/)
+									&& password.match(/([0-9])/))
+								strength += 1
+							if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/))
+								strength += 1
+							if (password
+									.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,",%,&,@,#,$,^,*,?,_,~])/))
+								strength += 1
+
+							if (strength < 2) {
+								$('#result').removeClass()
+								$('#result').addClass('weak')
+								return 'Weak'
+							} else if (strength == 2) {
+								$('#result').removeClass()
+								$('#result').addClass('good')
+								return 'Good'
+							} else {
+								$('#result').removeClass()
+								$('#result').addClass('strong')
+								return 'Strong'
+							}
+						}
+					});
+</script>
+</head>
+<body>
+
+	<div id="log-form">
+
+		<form>
+			<div id="headname" class="headname">Login Form</div>
+			<div id="dfname" class="dfname">
+				<div id="accno">Account Number</div>
+				<input type="text" name="acctno" id="acctno" required></input>
+			</div>
+
+			<div id="dfpassword" class="dfpassword">
+				<div id="fpassword">Password</div>
+				<input type="password" name="password" id="password"></input>
+			</div>
+			<span id="result"></span>
+
+			<div id="btn" class="but">
+				<input type="submit" value="Login" class="button"
+					onClick="return validateForm();" />
+			</div>
+			<div id="msg1" class="msg1">
+				<a href="#">First Time User? Register</a>
+			</div>
+			<div id="msg1" class="msg1">
+				<a href="#">Forgot User ID? Register</a>
+			</div>
+			<div id="msg1" class="msg1">
+				<a href="#">Forgot Password?</a>
+			</div>
+		</form>
+
+	</div>
+</body>
+</html>
