@@ -131,15 +131,117 @@ $(function() {
 		$(this).removeClass("error");
 	});
 	
-	$("#checkbox1").click(function() {
-		if ($(this).is(":checked")) {
-			$("#paddr").hide(200);
-		} else {
-			$("#paddr").show(300);
+	$("#raddrl1").blur(function() {
+		raddrl1 = $(this).val();
+		if (raddrl1 == "") {
+			$(this).addClass("error");
+			$(this).val("Invalid Address");
+		}
+		else if(raddrl1.length>40){
+			$(this).addClass("error");
+			$(this).val("Max Address Length Exceeded");
+		}
+	});	
+	
+	$("#raddrl1").focus(function() {
+		$(this).removeClass("error");
+		$(this).val(raddrl1);
+	});
+
+	$("#raddrl2").blur(function() {
+		raddrl2 = $(this).val();
+		if (raddrl2 == "") {
+			$(this).addClass("error");
+			$(this).val("Invalid Address");
+		}
+		else if(raddrl2.length>40){
+			$(this).addClass("error");
+			$(this).val("Max Address Length Exceeded");
+		}
+	});	
+	
+	$("#raddrl2").focus(function() {
+		$(this).removeClass("error");
+		$(this).val(raddrl2);
+	});
+
+	$("#raddrl2").blur(function() {
+		raddrl2 = $(this).val();
+		if (raddrl2 == "") {
+			$(this).addClass("error");
+			$(this).val("Please enter a Address");
+		}
+		else if(raddrl2.length>40){
+			$(this).addClass("error");
+			$(this).val("Max Address Length Exceeded");
 		}
 	});
 
-	$(".btn").click(function() {
+	$("#rlandmark").blur(function() {
+		rlandmark = $(this).val();
+		if (rlandmark == "") {
+			$(this).addClass("error");
+			$(this).val("Please enter a  Landmark");
+		}
+		else if(rlandmark.length>20){
+			$(this).addClass("error");
+			$(this).val("Max Landmark Length Exceeded");
+		}
+	});	
+	
+	$("#rlandmark").focus(function() {
+		$(this).removeClass("error");
+		$(this).val(rlandmark);
+	});
+
+	$("#rstate").blur(function() {
+		rstate = $(this).val();
+		if (rstate == null) {
+			$(this).addClass("error");
+			$(this).val("Please select a State");
+		}
+	});
+	
+	$("#rstate").focus(function() {
+		$(this).removeClass("error");
+		$(this).val(rstate);
+	});
+
+	$("#rcity").blur(function() {
+		rcity = $(this).val();
+		if (rcity == "") {
+			$(this).addClass("error");
+			$(this).val("Please enter a City");
+		}
+		else if(rcity.length>30){
+			$(this).addClass("error");
+			$(this).val("Max city Length Exceeded");
+		}
+	});	
+	
+	$("#rcity").focus(function() {
+		$(this).removeClass("error");
+		$(this).val(rcity);
+	});
+
+	$("#rpincode").blur(function() {
+		rpincode = $(this).val();
+		if (rpincode == "") {
+			$(this).addClass("error");
+			$(this).val("Incomplete function Please enter correct Pincode");
+		}
+		else if(rpincode.length>30){
+			$(this).addClass("error");
+			$(this).val("Incomplete function Max city Pincode Exceeded");
+		}
+	});	
+	
+	$("#rpincode").focus(function() {
+		$(this).removeClass("error");
+		$(this).val(rpincode);
+	});
+
+	$(".fbtn").click(function() {
 		if (animating)
 			return false;
 		animating = true;
@@ -152,12 +254,8 @@ $(function() {
 			opacity : 0
 		}, {
 			step : function(now, mx) {
-				// as the opacity of current_fs reduces to 0 - stored in "now"
-				// 1. scale current_fs down to 80%
 				scale = 1 - (1 - now) * 0.2;
-				// 2. bring next_fs from the right(50%)
 				left = (now * 50) + "%";
-				// 3. increase opacity of next_fs to 1 as it moves in
 				opacity = 1 - now;
 				current_fs.css({
 					'transform' : 'scale(' + scale + ')'
@@ -173,6 +271,31 @@ $(function() {
 				animating = false;
 			},
 			easing : 'easeInOutBack'
+		});
+	});
+
+	$(".pbtn").click(function() {
+		if(animating) return false;
+		animating = true;
+		
+		current_fs = $(this).parent().parent();
+		previous_fs =$(this).parent().parent().prev();
+
+		previous_fs.show(); 
+		current_fs.animate({opacity: 0}, {
+			step: function(now, mx) {
+				scale = 0.8 + (1 - now) * 0.2;
+				left = ((1-now) * 50)+"%";
+				opacity = 1 - now;
+				current_fs.css({'left': left});
+				previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+			}, 
+			duration: 800, 
+			complete: function(){
+				current_fs.hide();
+				animating = false;
+			}, 
+			easing: 'easeInOutBack'
 		});
 	});
 
