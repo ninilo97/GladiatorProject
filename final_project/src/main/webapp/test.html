@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>LOGIN</title>
+
+<link rel="stylesheet" href="resources/css/test.css" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$("#btn1").click(function(evt){
+			evt.preventDefault();
+			
+			$(".test").load("Login.html", function() {
+			});
+		});
+		$("#btn1").click(function(evt){
+			evt.preventDefault();
+			
+			$(".test").load("Account.html", function() {
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="" class="lfield">
+		<div class="nav" id="btn1" name="" >Login</div>
+		<div class="nav" id="btn2" name="" >Account</div>
+	</div>
+	<div class="test">
+	</div>
+</body>
+</html>
