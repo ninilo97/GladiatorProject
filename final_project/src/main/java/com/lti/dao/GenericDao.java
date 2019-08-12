@@ -12,18 +12,18 @@ public class GenericDao {
 
 	@PersistenceContext
 	protected EntityManager entityManager;
-	
+
 	public void save(Object obj) {
 		entityManager.merge(obj);
 	}
-	
+
 	public <E> E fetchById(Class<E> clazz, Object pk) {
 		return entityManager.find(clazz, pk);
 	}
-	
-	public <E> List<E> fetchAll(Class<E> clazz){
-		String q="select obj from " + clazz.getName() +" as obj";
+
+	public <E> List<E> fetchAll(Class<E> clazz) {
+		String q = "select obj from " + clazz.getName() + " as obj";
 		return entityManager.createQuery(q).getResultList();
 	}
-	
+
 }

@@ -34,7 +34,7 @@ public class Account {
 	@Column(name = "EMAIL")
 	private String emailID;
 	@Column(name = "AADHAR")
-	private int aadharNum;
+	private String aadharNum;
 	@Column(name = "DOB")
 	private LocalDate dob;
 
@@ -49,7 +49,7 @@ public class Account {
 	@Column(name = "RCITY")
 	private String rCity;
 	@Column(name = "RPINCODE")
-	private int rPincode;
+	private String rPincode;
 
 	@Column(name = "PADDRL1")
 	private String mAddrLine1;
@@ -62,7 +62,7 @@ public class Account {
 	@Column(name = "PCITY")
 	private String mCity;
 	@Column(name = "PPINCODE")
-	private int mPincode;
+	private String mPincode;
 
 	@Column(name = "OCCP")
 	private String occType;
@@ -72,15 +72,15 @@ public class Account {
 	private long grossAnnualIncome;
 
 	@Column(name = "DEBIT")
-	private int debitCard;
+	private String debitCard;
 	@Column(name = "NETBANKING")
-	private int netBanking;
+	private String netBanking;
 
 	@Column(name = "BAL")
-	private int balance = Integer.parseInt("0");
+	private String balance = "0";
 
 	@Column(name = "APPR")
-	private int appr = Integer.parseInt("0");	
+	private String appr = "0";
 
 	@Override
 	public String toString() {
@@ -119,19 +119,19 @@ public class Account {
 		this.grossAnnualIncome = grossAnnualIncome;
 	}
 
-	public int getBalance() {
+	public String getBalance() {
 		return balance;
 	}
 
-	public void setBalance(int balance) {
+	public void setBalance(String balance) {
 		this.balance = balance;
 	}
 
-	public int getAppr() {
+	public String getAppr() {
 		return appr;
 	}
 
-	public void setAppr(int appr) {
+	public void setAppr(String appr) {
 		this.appr = appr;
 	}
 
@@ -183,11 +183,11 @@ public class Account {
 		this.emailID = emailID;
 	}
 
-	public int getAadharNum() {
+	public String getAadharNum() {
 		return aadharNum;
 	}
 
-	public void setAadharNum(int aadharNum) {
+	public void setAadharNum(String aadharNum) {
 		this.aadharNum = aadharNum;
 	}
 
@@ -239,11 +239,11 @@ public class Account {
 		this.rCity = rCity;
 	}
 
-	public int getrPincode() {
+	public String getrPincode() {
 		return rPincode;
 	}
 
-	public void setrPincode(int rPincode) {
+	public void setrPincode(String rPincode) {
 		this.rPincode = rPincode;
 	}
 
@@ -287,11 +287,11 @@ public class Account {
 		this.mCity = mCity;
 	}
 
-	public int getmPincode() {
+	public String getmPincode() {
 		return mPincode;
 	}
 
-	public void setmPincode(int mPincode) {
+	public void setmPincode(String mPincode) {
 		this.mPincode = mPincode;
 	}
 
@@ -311,19 +311,19 @@ public class Account {
 		this.sourceOfIncome = sourceOfIncome;
 	}
 
-	public int getDebitCard() {
+	public String getDebitCard() {
 		return debitCard;
 	}
 
-	public void setDebitCard(int debitCard) {
+	public void setDebitCard(String debitCard) {
 		this.debitCard = debitCard;
 	}
 
-	public int getNetBanking() {
+	public String getNetBanking() {
 		return netBanking;
 	}
 
-	public void setNetBanking(int netBanking) {
+	public void setNetBanking(String netBanking) {
 		this.netBanking = netBanking;
 	}
 }

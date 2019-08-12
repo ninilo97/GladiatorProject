@@ -671,9 +671,22 @@ $(function() {
 	
 	$(".form").submit(function(evt) {
 		evt.preventDefault();
-		if(chk3==false){
+		var tAndC = false;
+		if($("#tAndC").is(":checked")) {
+			tAndC=true;
+		}
+		if(chk3==false || tAndC==false){
 			return false;
 		}
+		var debitCheck="0";
+		var netbankCheck="0";
+		if($("#debit").is(":checked")) {
+			debitCheck="1";
+		}
+		if($("#netbanking").is(":checked")) {
+			netbankCheck="1";
+		}
+		
 		var obj = {
 			title : $("#title").val(),
 			firstName : $("#fname").val(),
@@ -699,14 +712,14 @@ $(function() {
 			occType : $("#occp").val(),
 			sourceOfIncome : $("#srcinc").val(),
 			grossAnnualIncome : $("#grsinc").val(),
-			debitCard : $("#debit").val(),
-			netBanking : $("#netbanking").val()
+			debitCard : debitCheck,
+			netBanking : netbankCheck
 		}
-		alert(JSON.stringify(obj));
+		//alert(JSON.stringify(obj));
 		$.ajax({
 			url : 'registerAccount.lti',
 			method : 'POST',
-			data : JSON.stringify(obj),
+			data: JSON.stringify(obj),
 			contentType : 'application/json',
 			success : function(response) {
 				alert("Registration Successful");

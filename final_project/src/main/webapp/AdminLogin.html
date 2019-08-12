@@ -3,85 +3,33 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>LOGIN FORM</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-	
-</script>
-<script>
-	$(document)
-			.ready(
-					function() {
-						$('#password')
-								.keyup(
-										function() {
-											$('#result')
-													.html(
-															checkStrength($(
-																	'#password')
-																	.val()))
-										})
-						function checkStrength(password) {
-							var strength = 0
-							if (password.length < 6) {
-								$('#result').removeClass()
-								$('#result').addClass('short')
-								return 'Too short'
-							}
 
-							if (password.length > 7)
-								strength += 1
-
-							if (password.match(/([a-z].*[A-Z])|([A-Z].*[a-z])/))
-								strength += 1
-							if (password.match(/([a-zA-Z])/)
-									&& password.match(/([0-9])/))
-								strength += 1
-							if (password.match(/([!,%,&,@,#,$,^,*,?,_,~])/))
-								strength += 1
-							if (password
-									.match(/(.*[!,%,&,@,#,$,^,*,?,_,~].*[!,",%,&,@,#,$,^,*,?,_,~])/))
-								strength += 1
-
-							if (strength < 2) {
-								$('#result').removeClass()
-								$('#result').addClass('weak')
-								return 'Weak'
-							} else if (strength == 2) {
-								$('#result').removeClass()
-								$('#result').addClass('good')
-								return 'Good'
-							} else {
-								$('#result').removeClass()
-								$('#result').addClass('strong')
-								return 'Strong'
-							}
-						}
-					});
-</script>
+<link rel="stylesheet" href="resources/css/AdminLogin.css" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="resources/javascript/AdminLogin.js"></script>
 </head>
 <body>
-	<div id="admin-form">
+	<div class="regform">
+		<form class="form">
+			<fieldset>
+				<div id="" class="titleDesc">Admin Login</div>
 
-		<form>
-			<div id="headname" class="headname">Admin Form</div>
-			<div id="dfname" class="dfname">
-				<div id="admid">Admin ID</div>
-				<input type="text" name="admin_id" id="admin_id" required></input>
-			</div>
+				<div id="" class="lfield">
+					<div id="" class="desc">Admin ID</div>
+					<input type="text" id="id"></input>
+				</div>
 
-			<div id="dfpassword" class="dfpassword">
-				<div id="fpassword">Password</div>
-				<input type="password" name="password" id="password"></input>
-			</div>
-			<span id="result"></span>
+				<div id="" class="lfield">
+					<div id="" class="desc">Password</div>
+					<input type="password" id="password"></input>
+				</div>
 
-			<div id="btn" class="but">
-				<input type="submit" value="Login" class="button"
-					onClick="return validateForm();" />
-			</div>
-
+				<div id="" class="lfield">
+					<input type="submit" class="btn" name="" value="Register">
+				</div>
+			</fieldset>
 		</form>
-
 	</div>
 </body>
 </html>
