@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Internet Banking Registration </title>
+<link rel="stylesheet" href="resources/css/OnlineAccount.css"/>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<script>
+	$(function() {
+		$("#reg_form").submit(function(evt) {
+			evt.preventDefault();
+			var obj = {
+					 accNo  : $("#accountnumber").val(),
+					 password: $("#password").val(),
+					 cpassword	 : $("#cpassword").val(),
+					 txPass: $("#transactionpassword").val(),
+					 ctxPass: $("#ctransactionpassword").val()
+			}
+			$.ajax({
+				url : 'onlineAccount.lti',
+				method : 'POST',
+				data : JSON.stringify(obj),
+				contentType : 'application/json',
+				success : function(response) {
+					alert(JSON.stringify(response));
+				}
+			})
+		})
+	})
+</script>
+</head>
+<body>
+<div id="reg_form">
+		<form>
+			<div id="" class="">
+				<b>Registration for Internet Banking </b>
+			</div>
+			
+			<br>
+
+			<div id="">
+				Account Number : <input type="text" name="" id="accountnumber"
+					required></input>
+			</div>
+
+			<div id="">
+				Set Login Password : <input type="text" name="" id="password"
+					required></input>
+			</div>
+
+			<div id="">
+				Confirm Login Password : <input type="text" name="" id="cpassword"
+					required></input>
+			</div>
+
+			<div id="">
+				Set Transaction Password : <input type="text" name=""
+					id="transactionpassword" required></input>
+			</div>
+
+			<div id="">
+				Confirm Transaction Password : <input type="text" name=""
+					id="ctransactionpassword" required></input>
+			</div>
+
+			<div id="outer">
+				<div id="inner" class="">
+					<input type="submit" id="" value="Register" class="" />
+				</div>
+
+
+			</div>
+	</div>
+	</fieldset>
+	</form>
+	</div>
+
+
+</body>
+</html>
