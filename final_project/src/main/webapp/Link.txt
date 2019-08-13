@@ -1,9 +1,3 @@
-Sessions - 
-https://www.javaworld.com/article/2072937/solving-the-logout-problem-properly-and-elegantly.html
-
-navbar - 
-https://www.w3schools.com/css/css_navbar.asp
-
 Splash screen - 
 http://www.javacreed.com/how-to-add-splash-screen-using-maven/
 
