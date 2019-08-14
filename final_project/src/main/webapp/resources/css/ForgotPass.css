@@ -1,0 +1,86 @@
+@charset "ISO-8859-1";
+
+input {
+	text-indent: 5px;
+}
+
+#fpass_form {
+	margin: auto;
+	width: 30%;
+	border: 1px solid darkgrey;
+	border-radius: 3px;
+	padding: 14px 18px;
+}
+
+.form fieldset {
+	padding: 0px;
+	border: 0;
+}
+
+input.error {
+	background-color: #FCCCBB;
+	border-color: #FF0000 !important;
+	color: #FF0000;
+}
+
+input.noerror {
+	background-color: #e3ffd9;
+	border-color: #007f00 !important;
+	color: #007f00;
+}
+
+.form input {
+	width: 100%;
+	height: 25px;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
+.desc {
+	padding: 0px 0px 2px 0px;
+	font-family: "Arial";
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.titleDesc {
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+	font-weight: 300;
+	font-family: "Arial";
+	font-size: 30px;
+}
+
+.form .lfield {
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.form .btn {
+	font-family: Arial;
+	font-weight: 800;
+	font-size: 20px;
+	color: white;
+	opacity: 1;
+	width: 100%;
+	height: 35px;
+	border: 1px #fb641b;
+	border-radius: 2px;
+	background: #fb641b;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2)
+}
+
+#outer
+{
+    width:100%;
+    text-align: center;
+}
+#inner
+{
+    display: inline-block;
+}
