@@ -17,6 +17,10 @@ public class GenericDao {
 		entityManager.merge(obj);
 	}
 
+	public void delete(final Object object) {
+		entityManager.remove(object);
+	}
+
 	public <E> E fetchById(Class<E> clazz, Object pk) {
 		return entityManager.find(clazz, pk);
 	}

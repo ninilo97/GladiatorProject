@@ -1,8 +1,6 @@
 package com.lti.entity;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -95,6 +93,8 @@ public class Account {
 				+ ", appr=" + appr + "]";
 	}
 
+	
+	
 	public int getAccNo() {
 		return accNo;
 	}

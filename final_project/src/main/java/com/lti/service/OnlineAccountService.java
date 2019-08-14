@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.dao.GenericDao;
-import com.lti.entity.OnlineAccount;
+import com.lti.entity.OAccount;
 
 @Service
 public class OnlineAccountService {
@@ -15,7 +15,7 @@ public class OnlineAccountService {
 	private GenericDao dao;
 		
 	@Transactional
-	public void onlineAccount(OnlineAccount oacc) {
+	public void onlineAccount(OAccount oacc) {
 		dao.save(oacc);
 		
 	}

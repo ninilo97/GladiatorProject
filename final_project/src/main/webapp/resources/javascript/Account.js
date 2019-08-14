@@ -715,7 +715,7 @@ $(function() {
 			debitCard : debitCheck,
 			netBanking : netbankCheck
 		}
-		//alert(JSON.stringify(obj));
+		
 		$.ajax({
 			url : 'registerAccount.lti',
 			method : 'POST',

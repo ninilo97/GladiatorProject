@@ -7,18 +7,17 @@ import org.springframework.stereotype.Service;
 
 
 import com.lti.dao.GenericDao;
-import com.lti.entity.AddNewBen;
+import com.lti.entity.Payee;
 
 @Service
-public class AddNewBenService {
+public class PayeeServiceImpl implements PayeeService{
 	
 	@Autowired
 	private GenericDao gdao;
 	
 	@Transactional
-	public void addnewBen(AddNewBen addnew)
-	{
-		gdao.save(addnew);
+	public void addPayee(Payee payee) {
+		gdao.save(payee);
 	}
 
 }

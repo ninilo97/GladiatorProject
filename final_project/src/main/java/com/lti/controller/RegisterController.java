@@ -6,16 +6,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lti.entity.Account;
-import com.lti.service.RegisterServiceImpl;
+import com.lti.service.RegisterService;
 
 @RestController
 public class RegisterController {
+	
 	@Autowired
-	private RegisterServiceImpl registerService;
+	private RegisterService registerService;
 
 	@PostMapping("/registerAccount.lti")
 	public void registerAccount(@RequestBody Account acc) {
-		System.out.println(acc.toString());
+		//System.out.println(acc.toString());
 		registerService.registerAccount(acc);
 	}
 }

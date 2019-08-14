@@ -3,8 +3,8 @@ input{
 	text-indent : 5px;
 }
 
-#addnewben_form
-{
+
+.regform{
 	margin: auto;
 	width: 30%;
 	border: 1px solid darkgrey;
