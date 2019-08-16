@@ -1,12 +1,45 @@
 @charset "ISO-8859-1";
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=date] {
+  -moz-appearance: textfield;
+  padding: 1px 1px 1px 1px;
+}
 input {
 	text-indent: 5px;
 }
 
-#imps_form {
+
+body {
+	height: 100%;
+	background-color: #aff6cf;
+	background-image: linear-gradient(315deg, #aff6cf 0%, #9f98e8 74%);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.form select{
+    width: 100%;
+	height: 29px;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
+#regform {
 	margin: auto;
-	width: 45%;
+	width: 50%;
 	border: 1px solid darkgrey;
 	border-radius: 3px;
 	padding: 14px 18px;
@@ -17,28 +50,26 @@ input {
 	border: 0;
 }
 
-input.error {
+select.error, input.error {
 	background-color: #FCCCBB;
 	border-color: #FF0000 !important;
 	color: #FF0000;
 }
 
-input.noerror {
+select.noerror, input.noerror {
 	background-color: #e3ffd9;
 	border-color: #007f00 !important;
 	color: #007f00;
 }
 
-#toacct
-{
+#toacct {
 	width: 100%;
 	height: 25px;
 	border: 1px solid grey;
 	border-radius: 3px;
 }
 
-#addnew
-{
+#addnew {
 	width: 100%;
 	height: 25px;
 	border: 1px solid grey;
@@ -79,41 +110,36 @@ input.noerror {
 
 .form .btn {
 	font-family: Arial;
-	font-weight: 800;
+	font-weight: 600;
 	font-size: 20px;
-	color: white;
+	//color: white;
 	opacity: 1;
 	width: 100%;
 	height: 35px;
 	border: 1px #fb641b;
 	border-radius: 2px;
-	background: #fb641b;
+	background: rgb(159,152,232);
+	background: linear-gradient(90deg, rgba(159,152,232,1) 0%, rgba(175,246,207,1) 74%);
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2)
 }
 
-.btn1
-{
-	
-	font-family: Arial;
-	font-weight: 800;
-	font-size: 20px;
-	color: white;
-	opacity: 1;
-	width: 50%;
-	height: 25px;
-	border: 1px #fb641b;
-	border-radius: 2px;
-	background: #fb641b;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2)
-	
+#inlineText{
+	width: 50% !important;
+	float: left;
 }
 
-#outer
-{
-    width:100%;
-  
+#inlineBtn{
+	font-weight: 600;
+	height: 25px !important;
+	width: 45% !important;
+	margin: 0px 0px 0px 0px;
+	margin: 19px 0px 0px 10px;
 }
-#inner
-{
-    display: inline-block;
+
+#wrapBtn{
+	width: 100%;
+}
+
+.inlineBtn{
+	display: inline-block;
 }

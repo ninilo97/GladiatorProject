@@ -541,10 +541,11 @@ $(function() {
 	});
 	
 	$("#grsinc").blur(function() {
+		var reg = /^[0-9]+$/
 		grsinc = $(this).val();
-		if (grsinc == "") {
+		if (grsinc == "" || !reg.test(grsinc)) {
 			$(this).addClass("error");
-			$(this).val("Please enter Source of Income");
+			$(this).val("Invalid Gross Income");
 		}
 		else if(grsinc.length>20){
 			$(this).addClass("error");

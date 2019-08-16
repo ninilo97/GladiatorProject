@@ -11,18 +11,18 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "TB_PAYEE")
 public class Payee {
-	
+
 	@Id
 	@GeneratedValue
 	@Column(name = "PAYID")
 	private int payid;
-	
+
 	@Column(name = "PAYNAME")
 	private String payname;
 
 	@Column(name = "PAYACCNO")
 	private String payaccno;
-	
+
 	@Column(name = "PAYNN")
 	private String paynn;
 
@@ -60,5 +60,13 @@ public class Payee {
 
 	public void setPaynn(String paynn) {
 		this.paynn = paynn;
-	}	
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
 }

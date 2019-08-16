@@ -69,6 +69,10 @@ th {
 	font-weight:600;
 }
 
+.error{
+	color : red;
+}
+
 .titleDesc{
     width: auto;
     height: auto;

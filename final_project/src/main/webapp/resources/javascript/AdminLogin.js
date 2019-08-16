@@ -58,6 +58,7 @@ $(function() {
 	function success() {
 		if (typeof (Storage) !== "undefined") {
 			if (sessionStorage.id) {
+				
 			} else {
 				sessionStorage.id = $("#id").val();
 			}

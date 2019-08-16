@@ -3,7 +3,6 @@ $(function() {
 	var payaccno;
 	var rpayaccno;
 	var paynn;
-	alert("FK PK connection in controller remains");
 	
 	$("#payname").blur(function() {
 		var reg = /^[a-zA-Z ]+$/
@@ -43,7 +42,7 @@ $(function() {
 
 	$("#rpayaccno").blur(function() {
 		rpayaccno = $(this).val();
-		if (rpayaccno != payaccno ) {
+		if (rpayaccno != payaccno || rpayaccno=="") {
 			$(this).addClass("error");
 			$(this).val("Account Number Mismatch");
 		} else {
@@ -81,20 +80,22 @@ $(function() {
 	$(".form").submit(function(evt) {
 		evt.preventDefault();
 		var obj = {
-			accno : "385",
+			accNo : sessionStorage.accNo,
 			payname : $("#payname").val(),
 			payaccno : $("#payaccno").val(),
 			paynn : $("#paynn").val()
 		}
-
-		alert(JSON.stringify(obj));
+		//alert(JSON.stringify(obj));
 		$.ajax({
 			url : 'addPayee.lti',
 			method : 'POST',
 			data : JSON.stringify(obj),
 			contentType : 'application/json',
 			success : function(response) {
-				alert("Beneficiary added Successfully");
+				if(response==true){
+					alert("Beneficiary added Successfully");
+					window.location.href='Dashboard.html'
+				}
 			}
 		})
 	})

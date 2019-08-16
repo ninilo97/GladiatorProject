@@ -101,21 +101,21 @@ $(function() {
 	$("form").submit(function(evt) {
 		evt.preventDefault();
 		if (chk == false) return false;
-		       
+		
 		var obj = {
 			pass : $("#pass").val(),
 			txPass : $("#txPass").val(),
-			attempt : "0",
-			accNo = $("#accNo").val()
+			accNo : $("#accNo").val()
 		}
-		
 		$.ajax({
 			url : 'OAccount.lti',
 			method : 'POST',
 			data : JSON.stringify(obj),
 			contentType : 'application/json',
 			success : function(response) {
-				alert(JSON.stringify(response));
+				if(response==true){
+					window.location.href = "Login.html";
+				}
 			}
 		})
 	})

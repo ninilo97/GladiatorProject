@@ -29,6 +29,10 @@ input.noerror {
     color:#007f00;
 }
 
+#disError{
+	font-weight: 600;
+    color:#FF0000;
+}
 
 .form input{
     width: 100%;

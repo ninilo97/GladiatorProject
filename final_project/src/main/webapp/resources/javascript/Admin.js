@@ -1,5 +1,4 @@
 $(function() {
-
 	if (sessionStorage.id == undefined) {
 		$("#sess").text("Session ended... Redirecting to Admin Login....");
 		window.location.href = "AdminLogin.html";

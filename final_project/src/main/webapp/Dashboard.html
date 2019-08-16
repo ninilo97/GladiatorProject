@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="resources/css/Dashboard.css" />
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="resources/javascript/Dashboard.js"></script>
+</head>
+<body>
+	<div id="" class="lfield">
+		<ul>
+			<li><a id="accDetails" class="active">Account Details</a></li>
+			<li><a id="accSumm" class="">Account Summary</a></li>
+			<li><a id="accStatement" class="">Account Statement</a></li>
+			<li><a id="accTransfer" class="">Fund Transfer</a></li>
+			<li><a id="accPass" class="">Change Password</a></li>
+			<li><a id="accLogout" class="">Logout</a></li>
+		</ul>
+	</div>
+	<div id="loadDiv" class="hide">
+		<div id="accDetailsD" class="container hidden">
+		</div>
+		<div id="accSummD" class="container hidden">
+		</div>
+		<div id="accStatementD" class="container hidden">
+		</div>
+		<div id="accTransferD" class="container hidden">
+			<div id="payee" class="fundTransferElement">
+				<div id="" class="elements" >Add Payee</div>
+			</div>
+			<div id="fundTransfer" class="fundTransferElement">
+				<div id="" class="elements" >Transfer Funds</div>
+			</div>
+		</div>
+		<div id="accPassD" class="container hidden">
+			<div id="IMPS" class="fundTransferElement">
+				<div id="" class="fTEE" >FIX THIS BUG LOL</div>
+			</div>
+		</div>
+	</div>
+	<div id="sess" class="error"></div>
+</body>
+</html>

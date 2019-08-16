@@ -5,68 +5,67 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TB_ONLINEACCOUNT")
+@Table(name = "TB_OACCOUNT")
 public class OAccount {
-		@Id
-		@GeneratedValue
-		@Column(name="ACCID")
-		private int accId;
-				
-		@Column(name = "PASS")
-		private String pass;
-		
-		@Column(name = "TXPASS")
-		private String txPass;
-		
-		@Column(name = "ATTEMPT")
-		private String attempt;
-		
-		@ManyToOne
-		@JoinColumn(name = "ACCNO")
-		private Account acc;
-		
-		public String getTxPass() {
-			return txPass;
-		}
+	@Id
+	@GeneratedValue
+	@Column(name = "ACCID")
+	private int accId;
 
-		public void setTxPass(String txPass) {
-			this.txPass = txPass;
-		}
+	@Column(name = "PASS")
+	private String pass;
 
-		public String getAttempt() {
-			return attempt;
-		}
+	@Column(name = "TXPASS")
+	private String txPass;
 
-		public void setAttempt(String attempt) {
-			this.attempt = attempt;
-		}
+	@Column(name = "ATTEMPT")
+	private int attempt;
 
-		public int getAccId() {
-			return accId;
-		}
+	@OneToOne
+	@JoinColumn(name = "ACCNO")
+	private Account acc;
 
-		public void setAccId(int accId) {
-			this.accId = accId;
-		}
+	public String getTxPass() {
+		return txPass;
+	}
 
-		public String getPass() {
-			return pass;
-		}
+	public void setTxPass(String txPass) {
+		this.txPass = txPass;
+	}
 
-		public void setPass(String pass) {
-			this.pass = pass;
-		}
+	public int getAttempt() {
+		return attempt;
+	}
 
-		public Account getAcc() {
-			return acc;
-		}
+	public void setAttempt(int attempt) {
+		this.attempt = attempt;
+	}
 
-		public void setAcc(Account acc) {
-			this.acc = acc;
-		}
+	public int getAccId() {
+		return accId;
+	}
+
+	public void setAccId(int accId) {
+		this.accId = accId;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	public Account getAcc() {
+		return acc;
+	}
+
+	public void setAcc(Account acc) {
+		this.acc = acc;
+	}
 }
-		

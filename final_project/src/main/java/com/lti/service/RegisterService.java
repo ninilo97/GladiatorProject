@@ -7,5 +7,4 @@ import com.lti.entity.Account;
 @Resource
 public interface RegisterService {
 	public void registerAccount(Account acc);
-	
 }
