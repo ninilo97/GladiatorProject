@@ -70,8 +70,8 @@ $(function() {
 				}
 			})
 		} else {
+			setTimeout(function(){ window.location.reload(); }, 2500);
 			$("#disError").text("Incorrect OTP. Reloading page...");
-			location.reload();
 		}
 	})
 })

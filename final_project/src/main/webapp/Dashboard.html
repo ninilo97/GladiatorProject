@@ -12,8 +12,8 @@
 <body>
 	<div id="" class="lfield">
 		<ul>
-			<li><a id="accDetails" class="active">Account Details</a></li>
-			<li><a id="accSumm" class="">Account Summary</a></li>
+			<li><a id="accSumm" class="active">Account Summary</a></li>
+			<li><a id="accDetails" class="">Account Details</a></li>
 			<li><a id="accStatement" class="">Account Statement</a></li>
 			<li><a id="accTransfer" class="">Fund Transfer</a></li>
 			<li><a id="accPass" class="">Change Password</a></li>
@@ -21,8 +21,8 @@
 		</ul>
 	</div>
 	<div id="loadDiv" class="hide">
+		<div id="accSummD" class="container"></div>
 		<div id="accDetailsD" class="container hidden"></div>
-		<div id="accSummD" class="container hidden"></div>
 		<div id="accStatementD" class="container hidden"></div>
 		<div id="accTransferD" class="container hidden">
 			<div id="payee" class="fundTransferElement">
@@ -32,39 +32,37 @@
 				<div id="" class="elements">Transfer Funds</div>
 			</div>
 		</div>
-		<div id="accPassD" class="container hidden">
-			<form>
-				<div id="" class="">SET NEW PASSWORD</div>
+		<div id="accPassD" class="hidden">
+			<div class="regform">
+				<form class="form">
+					<fieldset>
+						<div id="" class="lfield">
+							<div id="" class="desc">Login Password</div>
+							<input type="password" name="password" id="pass"></input>
+						</div>
+						<div id="" class="lfield">
+							<div id="" class="desc">Confirm Login Password</div>
+							<input type="password" name="password" id="cpass"></input>
+						</div>
 
-				<div id="" class="">
-					<div id="" class="">Login Password</div>
-					<input type="password" name="password" id=""></input>
-				</div>
+						<div id="" class="lfield">
+							<div id="" class="desc">Transaction Password</div>
+							<input type="password" name="password" id="txPass"></input>
+						</div>
 
-				<div id="" class="">
-					<div id="">
-						Confirm Login Password : <input type="password" name="password"
-							id=""></input>
-					</div>
-				</div>
+						<div id="" class="lfield">
+							<div id="" class="desc">Confirm Trnsaction Password</div>
+							<input type="password" name="password" id="ctxPass"></input>
+						</div>
 
-				<div id="" class="">
-					<div id="">
-						Transaction Password : <input type="password" name="password"
-							id=""></input>
-					</div>
-				</div>
-
-				<div id="" class="">
-					<div id="">
-						Confirm Trnsaction Password : <input type="password"
-							name="password" id=""></input>
-					</div>
-				</div>
-				<div id="" class="">
-					<input type="submit" value="Submit" class="" />
-				</div>
-			</form>
+						<div id="sess" class="lfield"></div>
+						
+						<div id="" class="lfield">
+							<input type="submit" id="changeForm" value="Submit" class="btn"/>
+						</div>
+					<fieldset>
+				</form>
+			</div>
 		</div>
 	</div>
 	<div id="sess" class="error"></div>

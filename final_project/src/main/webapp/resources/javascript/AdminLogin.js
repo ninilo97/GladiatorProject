@@ -51,6 +51,9 @@ $(function() {
 				if (response == true) {
 					success();
 				}
+				else{
+					$("#disError").text("Incorrect Account Number or Password");
+				}
 			}
 		})
 	})

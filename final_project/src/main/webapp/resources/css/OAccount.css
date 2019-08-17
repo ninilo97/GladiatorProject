@@ -4,16 +4,11 @@ input{
 }
 
 .regform{
-	margin: auto;
+	margin: 30px 10px 10px 10px;
 	width: 60%;
-	border: 1px solid darkgrey;
+	border: 1px solid #0ADE77;
 	border-radius: 3px;
 	padding:14px 18px;
-}
-
-.form fieldset{
-    padding: 0px;
-	border : 0;
 }
 
 input.error {
@@ -31,6 +26,14 @@ input.noerror {
 .error{
     color:#FF0000 !important;
 }
+
+.form fieldset{
+    padding: 0px;
+    border : 0;
+    background: #000000;
+    background: -webkit-linear-gradient(to right, #156349, #000000);
+    background: linear-gradient(to right, #156349, #000000);
+}nb=
 
 .form input{
     width: 100%;
@@ -59,7 +62,6 @@ input.noerror {
 	background:#0ADE77;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,.2)
 }
-
 
 html {
 	height: 100%;
