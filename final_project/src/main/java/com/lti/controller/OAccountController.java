@@ -5,21 +5,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.lti.dto.OAccountCheck;
 import com.lti.dto.OAccountSetPass;
 import com.lti.dto.Transfer;
 import com.lti.entity.Account;
 import com.lti.entity.OAccount;
 import com.lti.service.OAccountService;
-import com.lti.service.RegisterService;
 
 @RestController
 public class OAccountController {
 
 	@Autowired
 	private OAccountService oAccountService;
-	
-	@Autowired
-	private RegisterService registerService;
 
 	@SuppressWarnings("finally")
 	@PostMapping("/OAccount.lti")
@@ -45,28 +42,25 @@ public class OAccountController {
 	}
 
 	@SuppressWarnings("finally")
-	@PostMapping("/transfer.lti")
-	public boolean onlineAccount(@RequestBody Transfer transfer) {
+	@PostMapping("/OAccountCheck.lti")
+	public boolean onlineAccountCheck(@RequestBody OAccountCheck oAccCheck) {
 		boolean flag = false;
-		
 		try {
-			Account fromAccount = oAccountService.fetchAccountById(Integer.parseInt(transfer.getFromAccNo()));
-			Account toAccount = oAccountService.fetchAccountById(Integer.parseInt(transfer.getToAccNo()));
-			
-			int amount = Integer.parseInt(transfer.getAmount());
-			if(amount > Integer.parseInt(fromAccount.getBalance())) return false;
-
-			fromAccount.setBalance(Integer.toString(Integer.parseInt(fromAccount.getBalance())-amount));
-			toAccount.setBalance(Integer.toString(Integer.parseInt(toAccount.getBalance())+amount));
-			
-			registerService.registerAccount(fromAccount);
-			registerService.registerAccount(toAccount);
-			flag = true;
+			Account account = oAccountService.fetchAccountById(Integer.parseInt(oAccCheck.getAccNo()));
+			System.out.println(account.getAppr());
+			if (Integer.parseInt(account.getAppr()) > 0) flag = true;
+			System.out.println(flag);
+			return flag;
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			return flag;
 		}
+	}
+
+	@PostMapping("/transfer.lti")
+	public boolean transfer(@RequestBody Transfer transfer) {
+		return oAccountService.transfer(transfer);
 	}
 
 }

@@ -1,33 +1,37 @@
 <html>
-	<head>
-	<link rel="stylesheet" type="text/css" href="style.css" >
-	</head>
+<head>
+	<link rel="stylesheet" href="resources/css/ForgotPass.css" />
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="resources/javascript/ForgotPass.js"></script>
+</head>
 <body>
-	<div id="fpass_form">
-		<form>
-			<div id="" class=""><b>Forgot Password</b></div>
-			<br>
+
+<div id="fpass_form">
+	<form class = "form">
+	<fieldset>
+			<div id="" class="titledesc">Forgot Password </div>
 			
-			<div id="" class=""> Enter Details :
-			<br>
-				<div id=""> Enter User ID :
-				<input type="text" name = "" id="" required></input>
+			<div id="" class="lfield">
+					<div class="desc">Enter User ID : </div>
+					<input type="text" class="idle" id="userid"></input>
 			</div>
-			</div>
-			
-			<div id="">Enter OTP
-				<input type="text" name = "" id="" required></input>
-			</div>
-			
-			<div id = "outer">
-			<div id="inner" class="">
-			<input type="submit" id="" value="Proceed" class="" />
+				
+			<div id="" class="lfield">
+					<div class="desc">Enter OTP : </div>
+					<input type="text" class="idle" id="otp"></input>
 			</div>
 			
-			<div id="inner" class="">
-			<input type="submit" id="" value="Back" class="" />
+		<div id = "outer">
+			<div id="inner" class="lfield">
+			<input type="submit" id="" value="Proceed" class="btn" />
 			</div>
+			
+			<div id="inner" class="lfield">
+			<input type="submit" class="btn"  id="" value="Back" />
 			</div>
+		</div>
+		</fieldset>
 		 </form>
   
 </div>

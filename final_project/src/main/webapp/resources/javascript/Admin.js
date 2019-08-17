@@ -19,6 +19,7 @@ $(function() {
 				data : JSON.stringify(obj),
 				contentType : 'application/json',
 				success : function(response) {
+					$( "#details" ).trigger( "click" );
 				}
 			})
 		})
@@ -34,6 +35,7 @@ $(function() {
 				data : JSON.stringify(obj),
 				contentType : 'application/json',
 				success : function(response) {
+					$( "#details" ).trigger( "click" );
 				}
 			})
 		})

@@ -24,15 +24,17 @@ $(function() {
 		$(this).val(accNo);
 	});
 
-	$("#pass").blur(function() {
-		var reg = /(?=^.{8,16}$)(?=(?:.*?\d){1})(?=.*[a-z])(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%*()_+^&]*$/
-		pass = $(this).val();
-		if (pass == "" || !reg.test(pass)) {
-			$(this).addClass("error");
-		} else {
-			$(this).addClass("noerror");
-		}
-	});
+	$("#pass")
+			.blur(
+					function() {
+						var reg = /(?=^.{8,16}$)(?=(?:.*?\d){1})(?=.*[a-z])(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%*()_+^&]*$/
+						pass = $(this).val();
+						if (pass == "" || !reg.test(pass)) {
+							$(this).addClass("error");
+						} else {
+							$(this).addClass("noerror");
+						}
+					});
 
 	$("#pass").focus(function() {
 		$(this).removeClass("idle");
@@ -91,7 +93,7 @@ $(function() {
 		var flag1 = $(this).parent().parent().find(".idle").val();
 		var flag2 = $(this).parent().parent().find(".error").val();
 		chk = false;
-		if (flag1 === undefined && flag2 === undefined) {
+		if (flag1 === undefined && (flag2 === undefined || flag2 === "")) {
 			chk = true;
 		} else {
 			chk = false;
@@ -100,21 +102,37 @@ $(function() {
 
 	$("form").submit(function(evt) {
 		evt.preventDefault();
-		if (chk == false) return false;
-		
+		if (chk == false)
+			return false;
+
 		var obj = {
-			pass : $("#pass").val(),
-			txPass : $("#txPass").val(),
 			accNo : $("#accNo").val()
 		}
 		$.ajax({
-			url : 'OAccount.lti',
+			url : 'OAccountCheck.lti',
 			method : 'POST',
 			data : JSON.stringify(obj),
 			contentType : 'application/json',
 			success : function(response) {
-				if(response==true){
-					window.location.href = "Login.html";
+				if (response == true) {
+					var obj = {
+						pass : $("#pass").val(),
+						txPass : $("#txPass").val(),
+						accNo : $("#accNo").val()
+					}
+					$.ajax({
+						url : 'OAccount.lti',
+						method : 'POST',
+						data : JSON.stringify(obj),
+						contentType : 'application/json',
+						success : function(response) {
+							if (response == true) {
+								window.location.href = "Login.html";
+							}
+						}
+					})
+				} else {
+					$("#sess").text("Account Request Pending");
 				}
 			}
 		})

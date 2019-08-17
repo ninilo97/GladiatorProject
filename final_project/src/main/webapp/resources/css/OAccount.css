@@ -3,7 +3,6 @@ input{
 	text-indent : 5px;
 }
 
-
 .regform{
 	margin: auto;
 	width: 30%;
@@ -29,6 +28,9 @@ input.noerror {
     color:#007f00;
 }
 
+.error{
+    color:#FF0000 !important;
+}
 
 .form input{
     width: 100%;

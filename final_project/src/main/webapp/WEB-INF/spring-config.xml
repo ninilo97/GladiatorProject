@@ -14,7 +14,7 @@
 	<!-- Enabling support for JSON parsing, validation and other features of 
 		Spring MVC -->
 	<mvc:annotation-driven />
-	<mvc:resources mapping="/resources/**" location="/resources/" /> 
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 
 	<!-- Loading annotated beans -->
 	<context:component-scan
@@ -48,6 +48,29 @@
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>
+	</bean>
+
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.office365.com" />
+		<property name="port" value="587" />
+		<property name="username" value="nikhil.londhe@lntinfotech.com" />
+		<property name="password" value="XXXXXXXX" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.smtp.connecttimeout">50000</prop>
+				<prop key="mail.smtp.timeout">30000</prop>
+				<prop key="mail.smtp.writetimeout">50000</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="preConfiguredMessage" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="nikhil.londhe@lntinfotech.com"></property>
 	</bean>
 
 	<!-- This bean will manage the transactions for us, so no need to manually 
