@@ -3,10 +3,9 @@ input{
 	text-indent : 5px;
 }
 
-
 .regform{
-	margin: auto;
-	width: 30%;
+	margin: 10px; 
+	width: 60%;
 	border: 1px solid darkgrey;
 	border-radius: 3px;
 	padding:14px 18px;
@@ -34,29 +33,17 @@ input.noerror {
     color:#FF0000;
 }
 
+#sess{
+	font-weight: 600;
+    color:#FF0000;
+}
+
+
 .form input{
     width: 100%;
 	height: 25px;
 	border: 1px solid grey;
 	border-radius: 3px;
-}
-
-.desc{
-	padding: 0px 0px 2px 0px;
-	font-family:"Arial";
-	font-size:15px;
-	font-weight:600;
-}
-
-.titleDesc{
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    padding: 10px;
-    position: relative;
-	font-weight:300;
-	font-family:"Arial";
-	font-size:30px;
 }
 
 .form .lfield {
@@ -67,16 +54,89 @@ input.noerror {
 }
 
 .form .btn{
-	font-family:Arial;
-	font-weight:800;
+	font-weight:600;
 	font-size:20px;
 	color:white;
     opacity:1;
 	
     width: 100%;
 	height: 35px;
-	border:1px #fb641b;
+	border:1px #0ADE77;
 	border-radius:2px;
-	background:#fb641b;
+	background:#0ADE77;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,.2)
+}
+
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.desc{
+	padding: 0px 0px 2px 0px;
+	font-family:"Arial";
+	font-size:15px;
+	font-weight:600;
+	color: #0ADE77;
+}
+
+.titleDesc {
+	width: auto;
+	height: auto;
+	padding: 10px;
+	text-align: left;
+	position: relative;
+	font-weight: 600;
+	font-size: 50px;
+	
+	color:#0ADE77;
+}
+
+.split {
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+.container {
+	margin: 30px; padding : 20px !important;
+	height: 20%;
+	display: flex;
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349, #000000);
+	background: linear-gradient(to right, #156349, #000000);
+	padding: 20px !important;
+}
+
+.left {
+	background-color: #156349;
+}
+
+.right {
+	background-color: #156349;
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349, #000000);
+	background: linear-gradient(to right, #156349, #000000);
+
+	padding: 0px 0px 0px 0px;
+	right: 0;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
 }

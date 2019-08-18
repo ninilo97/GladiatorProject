@@ -38,8 +38,13 @@ input.noerror {
 }
 
 #disError {
-	font-weight: 600;
-	color: #FF0000;
+	font-weight: 600 !important;
+	color: #FF0000 !important;
+}
+
+#sess{
+	font-weight: 600 !important;
+	color: #FF0000 !important;
 }
 
 .form input {

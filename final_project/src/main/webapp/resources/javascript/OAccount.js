@@ -24,17 +24,15 @@ $(function() {
 		$(this).val(accNo);
 	});
 
-	$("#pass")
-			.blur(
-					function() {
-						var reg = /(?=^.{8,16}$)(?=(?:.*?\d){1})(?=.*[a-z])(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%*()_+^&]*$/
-						pass = $(this).val();
-						if (pass == "" || !reg.test(pass)) {
-							$(this).addClass("error");
-						} else {
-							$(this).addClass("noerror");
-						}
-					});
+	$("#pass").blur(function() {
+		var reg = /(?=^.{8,16}$)(?=(?:.*?\d){1})(?=.*[a-z])(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%*()_+^&]*$/
+		pass = $(this).val();
+		if (pass == "" || !reg.test(pass)) {
+			$(this).addClass("error");
+		} else {
+			$(this).addClass("noerror");
+		}
+	});
 
 	$("#pass").focus(function() {
 		$(this).removeClass("idle");

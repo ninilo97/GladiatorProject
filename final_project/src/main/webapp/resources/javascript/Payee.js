@@ -3,7 +3,12 @@ $(function() {
 	var payaccno;
 	var rpayaccno;
 	var paynn;
-	
+
+	if (sessionStorage.accNo == undefined) {
+		$("#sess").text("Session ended... Redirecting to Login....");
+		window.location.href = "Login.html";
+	}
+
 	$("#payname").blur(function() {
 		var reg = /^[a-zA-Z ]+$/
 		payname = $(this).val();
@@ -85,7 +90,7 @@ $(function() {
 			payaccno : $("#payaccno").val(),
 			paynn : $("#paynn").val()
 		}
-		//alert(JSON.stringify(obj));
+
 		$.ajax({
 			url : 'addPayee.lti',
 			method : 'POST',
@@ -93,8 +98,11 @@ $(function() {
 			contentType : 'application/json',
 			success : function(response) {
 				if(response==true){
-					alert("Beneficiary added Successfully");
+					$("#sess").text("Payee added successfully");
 					window.location.href='Dashboard.html'
+					setTimeout(function() {
+						  window.location.href = "/NewPage.aspx";
+						}, 2000);
 				}
 			}
 		})

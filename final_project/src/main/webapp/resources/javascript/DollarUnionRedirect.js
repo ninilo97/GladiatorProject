@@ -10,5 +10,5 @@ $(function() {
 	sessionStorage.redirectUrl = getQueryString('redirectUrl');
 	sessionStorage.api = true;
 	window.location.href = 'Login.html'
-	//http://localhost:8087/final_project/DollarUnionRedirect.html?toAccNo=385&amount=1000&redirectUrl=admin.html
+	//http://localhost:8087/final_project/DollarUnionRedirect.html?toAccNo=385&amount=1000&redirectUrl=Admin.html
 })

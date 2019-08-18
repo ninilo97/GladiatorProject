@@ -14,12 +14,13 @@ html {
 body {
 	margin: 0;
 	height: 100%;
-	background-color: #aff6cf;
-	background-image: linear-gradient(315deg, #aff6cf 0%, #9f98e8 74%);
-	
-	//background: #000000;
-	//background: -webkit-linear-gradient(315deg, #0f9b0f 0%, #000000 74%);
-	//background: linear-gradient(315deg, #0f9b0f 0%, #000000 74%);
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349 50%, #000000);
+	background: linear-gradient(to right, #156349 50%, #000000); //
+	background: #000000; //
+	background: -webkit-linear-gradient(315deg, #0f9b0f 0%, #000000 74%);
+	//
+	background: linear-gradient(315deg, #0f9b0f 0%, #000000 74%);
 	font-family: sans-serif;
 	font-weight: 100;
 }
@@ -32,48 +33,31 @@ body {
 }
 
 .fundTransferElement {
-	text-align:center;
+	text-align: center;
 	float: left;
 	margin: 20px;
 	width: 25%;
 	height: 50%;
 	padding: 0 10px;
-	background-color: #aff6cf;
-	background-image: linear-gradient(315deg, #aff6cf 0%, #9f98e8 74%);
+	color: #0ADE77;
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349 50%, #000000);
+	background: linear-gradient(to right, #156349 10%, #000000);
 }
 
 .elements {
 	top: 40%;
-	color: 50px;
 	font-size: 50px;
 	font-weight: 800;
 	position: relative;
-	//background: #43cea2;
-	//background: -webkit-linear-gradient(to right, #43cea2, #185a9d);
-	//background: linear-gradient(to right, #43cea2, #185a9d);
-	
-	//background: #870000;
-	//background: -webkit-linear-gradient(to right, #190A05, #870000);
-	//background: linear-gradient(to right, #190A05, #870000);
-	
-	//background: #D3959B;
-	//background: -webkit-linear-gradient(to right, #BFE6BA, black);
-	//background: linear-gradient(to right, #BFE6BA, #D3959B);
-	
-	background: #780206;
-	background: -webkit-linear-gradient(to right, #061161, #780206);
-	background: linear-gradient(to right, #061161, #780206);
-	
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #0ADE77;
 }
 
-.hidden{
+.hidden {
 	display: none !important;
 }
 
 .container {
-	display:none;
 	padding: 100px;
 	height: 100%;
 	display: flex;
@@ -91,7 +75,7 @@ ul {
 
 li {
 	float: left;
-	border: 2px solid #9f98e8;
+	border: 2px solid #000000;
 }
 
 li:last-child {
@@ -99,32 +83,33 @@ li:last-child {
 }
 
 li a {
-	color: black;
 	font-weight: 600;
 	display: block;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	color: #0ADE77;
 }
 
 li a:hover, .active {
-	background-image: linear-gradient(90deg, #aff6cf 0%, #9f98e8 74%);
+	background-image: linear-gradient(to right, #156349 50%, #000000);
 }
 
 .desc {
 	padding: 0px 0px 2px 0px;
 	font-family: "Arial";
-	font-size: 15px;
+	font-size: 32px;
 	font-weight: 600;
+	color: #0ADE77;
 }
 
 .titleDesc {
 	width: auto;
 	height: auto;
-	margin: 0 auto;
 	padding: 10px;
+	text-align: left;
 	position: relative;
-	font-weight: 300;
-	font-family: "Arial";
-	font-size: 30px;
+	font-weight: 600;
+	font-size: 50px;
+	color: #0ADE77;
 }

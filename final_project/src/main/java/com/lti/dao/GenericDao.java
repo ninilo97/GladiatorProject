@@ -13,8 +13,8 @@ public class GenericDao {
 	@PersistenceContext
 	protected EntityManager entityManager;
 
-	public void save(Object obj) {
-		entityManager.merge(obj);
+	public Object save(Object obj) {
+		return entityManager.merge(obj);
 	}
 
 	public void delete(final Object object) {

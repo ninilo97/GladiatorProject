@@ -5,7 +5,9 @@
 <meta charset="ISO-8859-1">
 <title>Register Account</title>
 
-<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+	rel="stylesheet">
 <link rel="stylesheet" href="resources/css/Account.css" />
 <script src="resources/javascript/jquery-3.4.1.js"></script>
 <script src="resources/javascript/jquery-ui.js"></script>
@@ -13,252 +15,280 @@
 
 </head>
 <body>
-	<div class="regform">
-		<form class="form">
-			<fieldset>
-				<div id="" class="titleDesc">Create Account</div>
-				<div id="" class="titleDesc">Personal Details</div>
-
-				<div id="" class="lfield">
-					<div id="" class="desc">First Name</div>
-					<select id="title" class="idle">
-						<option id="" value="Title" disabled selected>Title</option>
-						<option id="" value="Mr">Mr.</option>
-						<option id="" value="Mrs">Mrs.</option>
-						<option id="" value="Ms">Ms.</option>
-						<option id="" value="Miss">Miss.</option>
-					</select> <input type="text" id="fname" class="idle"></input>
-				</div>
-
-				<div id="" class="lfield">
-					<div id="" class="desc">Middle Name</div>
-					<input type="text" id="mname" class="idle"></input>
-				</div>
-
-				<div id="" class="lfield">
-					<div id="" class="desc">Last Name</div>
-					<input type="text" id="lname" class="idle"></input>
-				</div>
-
-				<div id="" class="lfield">
-					<div id="" class="desc">Father's Name</div>
-					<input type="text" id="frname" class="idle"></input>
-				</div>
-
-				<div id="" class="lfield">
-					<div id="" class="desc">Mobile Number</div>
-					<input type="tel" id="mobno" class="idle" placeholder="Mobile Number"></input>
-				</div>
-
-				<div id="" class="lfield">
-					<div id="" class="desc">Email</div>
-					<input type="email" class="idle" id="email"></input>
-				</div>
-
-				<div id="" class="lfield">
-					<div id="" class="desc">Aadhar Card Number</div>
-					<input type="number" id="aadhar" class="idle"></input>
-				</div>
-
-				<div id="" class="lfield">
-					<div id="" class="desc">Date of Birth</div>
-					<input type="date" id="dob" class="idle"></input>
-				</div>
-				<div id="btnDiv" class="lfield">
-					<input type="button" id="chk1" class="fbtn" value="Next" />
-				</div>
-			</fieldset>
-			<fieldset>
-				<div id="maddr" class="">
-					<div id="" class="titleDesc">Mailing Address</div>
-					<div id="" class="lfield">
-						<div id="" class="desc">Address Line 1</div>
-						<input type="text" id="raddrl1" class="idle"></input>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc">Address Line 2</div>
-						<input type="text" id="raddrl2" class="idle"></input>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc">Landmark</div>
-						<input type="text" id="rlandmark" class="idle"></input>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc">State</div>
-						<select id="rstate"  class="idle" name="">
-							<option value="Select State" disabled selected>               Select State               </option>
-							<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-							<option value="Andhra Pradesh">Andhra Pradesh</option>
-							<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-							<option value="Assam">Assam</option>
-							<option value="Bihar">Bihar</option>
-							<option value="Chandigarh">Chandigarh</option>
-							<option value="Chhattisgarh">Chhattisgarh</option>
-							<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-							<option value="Daman and Diu">Daman and Diu</option>
-							<option value="Delhi">Delhi</option>
-							<option value="Goa">Goa</option>
-							<option value="Gujarat">Gujarat</option>
-							<option value="Haryana">Haryana</option>
-							<option value="Himachal Pradesh">Himachal Pradesh</option>
-							<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-							<option value="Jharkhand">Jharkhand</option>
-							<option value="Karnataka">Karnataka</option>
-							<option value="Kerala">Kerala</option>
-							<option value="Lakshadweep">Lakshadweep</option>
-							<option value="Madhya Pradesh">Madhya Pradesh</option>
-							<option value="Maharashtra">Maharashtra</option>
-							<option value="Manipur">Manipur</option>
-							<option value="Meghalaya">Meghalaya</option>
-							<option value="Mizoram">Mizoram</option>
-							<option value="Nagaland">Nagaland</option>
-							<option value="Orissa">Orissa</option>
-							<option value="Pondicherry">Pondicherry</option>
-							<option value="Punjab">Punjab</option>
-							<option value="Rajasthan">Rajasthan</option>
-							<option value="Sikkim">Sikkim</option>
-							<option value="Tamil Nadu">Tamil Nadu</option>
-							<option value="Tripura">Tripura</option>
-							<option value="Uttaranchal">Uttaranchal</option>
-							<option value="Uttar Pradesh">Uttar Pradesh</option>
-							<option value="West Bengal">West Bengal</option>
-						</select>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc">City</div>
-						<input type="text" id="rcity" class="idle"></input>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc">Pincode</div>
-						<input type="tel" id="rpincode" class="idle"></input>
-					</div>
-					
-				</div>
-
-				<div class="dcheckbox">
-					<input type="checkbox" class="checkbox" id="checkbox1" class="desc" name="" value="">
-					Permanent Address same as Mailing Address?
-				</div>
-
-				<div id="paddr" class="">
-					<div id="" class="titleDesc">Permanent Address</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc" class="idle">Address Line 1</div>
-						<input type="text" id="paddrl1"></input>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc" class="idle">Address Line 2</div>
-						<input type="text" id="paddrl2"></input>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc" class="idle">Landmark</div>
-						<input type="text" id="plandmark"></input>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc">State</div>
-						<select id="pstate" class="idle" name="">
-							<option value="Select State" disabled selected>               Select State               </option>
-							<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-							<option value="Andhra Pradesh">Andhra Pradesh</option>
-							<option value="Arunachal Pradesh">Arunachal Pradesh</option>
-							<option value="Assam">Assam</option>
-							<option value="Bihar">Bihar</option>
-							<option value="Chandigarh">Chandigarh</option>
-							<option value="Chhattisgarh">Chhattisgarh</option>
-							<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-							<option value="Daman and Diu">Daman and Diu</option>
-							<option value="Delhi">Delhi</option>
-							<option value="Goa">Goa</option>
-							<option value="Gujarat">Gujarat</option>
-							<option value="Haryana">Haryana</option>
-							<option value="Himachal Pradesh">Himachal Pradesh</option>
-							<option value="Jammu and Kashmir">Jammu and Kashmir</option>
-							<option value="Jharkhand">Jharkhand</option>
-							<option value="Karnataka">Karnataka</option>
-							<option value="Kerala">Kerala</option>
-							<option value="Lakshadweep">Lakshadweep</option>
-							<option value="Madhya Pradesh">Madhya Pradesh</option>
-							<option value="Maharashtra">Maharashtra</option>
-							<option value="Manipur">Manipur</option>
-							<option value="Meghalaya">Meghalaya</option>
-							<option value="Mizoram">Mizoram</option>
-							<option value="Nagaland">Nagaland</option>
-							<option value="Orissa">Orissa</option>
-							<option value="Pondicherry">Pondicherry</option>
-							<option value="Punjab">Punjab</option>
-							<option value="Rajasthan">Rajasthan</option>
-							<option value="Sikkim">Sikkim</option>
-							<option value="Tamil Nadu">Tamil Nadu</option>
-							<option value="Tripura">Tripura</option>
-							<option value="Uttaranchal">Uttaranchal</option>
-							<option value="Uttar Pradesh">Uttar Pradesh</option>
-							<option value="West Bengal">West Bengal</option>
-						</select>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc">City</div>
-						<input type="text" id="pcity" class="idle"></input>
-					</div>
-
-					<div id="" class="lfield">
-						<div id="" class="desc">Pincode</div>
-						<input type="tel" id="ppincode" class="idle"></input>
-					</div>
-				</div>
-
-				<div id="btnDiv" class="lfield">
-					<input type="button" id="btnPrev" class="pbtn" value="Prev" />
-					<input type="button" id="chk2" class="fbtn" value="Next" />
-				</div>
-			</fieldset>
-			<fieldset>
-				<div id="" class="titleDesc">Occupation Details</div>
-				
-				<div id="" class="lfield">
-					<div id="" class="desc">Occupation Types</div>
-					<input type="text" id="occp"></input>
-				</div>
-				
-				<div id="" class="lfield">
-					<div id="" class="desc">Source of Income</div>
-					<input type="text" id="srcinc"></input>
-				</div>
-				
-				<div id="" class="lfield">
-					<div id="" class="desc">Gross Annual Income</div>
-					<input type="tel" id="grsinc"></input>
-				</div>
-				
-				<div class="dcheckbox">
-					<input type="checkbox" id="debit" class="checkbox" name="" value=""> Want a Debit Card?<br>
-				</div>
-				
-				<div class="dcheckbox">
-					<input type="checkbox" id="netbanking" class="checkbox" name="" value="">Opt for Net Banking<br>
-				</div>
-
-				<div class="dcheckbox">
-					<input type="checkbox" id="tAndC" class="checkbox" name="" value=""> I have read and agree to the following <a target="_blank"
-						href="http://ideamensch.com/terms-and-conditions"
-						rel="nofollow noopener">Terms and conditions</a>
-				</div>
-
-				<div id="btnDiv" class="lfield">
-					<input type="button" id="btnPrev" class="pbtn" value="Prev" />
-					<input type="submit" id="chk3" class="btn" name="" value="Register">
-				</div>
-			</fieldset>
-		</form>
+	<div class="split left">
+		<div class="centered">
+			<img src="resources/images/logo.JPG" alt="Logo">
+		</div>
 	</div>
+
+	<div class="split right">
+		<div class="regform">
+			<form class="form">
+				<fieldset>
+					<div id="" class="titleDesc">Create Account</div>
+					<div id="" class="titleDesc">Personal Details</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">First Name</div>
+						<select id="title" class="idle">
+							<option id="" value="Title" disabled selected>Title</option>
+							<option id="" value="Mr">Mr.</option>
+							<option id="" value="Mrs">Mrs.</option>
+							<option id="" value="Ms">Ms.</option>
+							<option id="" value="Miss">Miss.</option>
+						</select> <input type="text" id="fname" class="idle"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Middle Name</div>
+						<input type="text" id="mname" class="idle"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Last Name</div>
+						<input type="text" id="lname" class="idle"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Father's Name</div>
+						<input type="text" id="frname" class="idle"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Mobile Number</div>
+						<input type="tel" id="mobno" class="idle"
+							placeholder="Mobile Number"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Email</div>
+						<input type="email" class="idle" id="email"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Aadhar Card Number</div>
+						<input type="number" id="aadhar" class="idle"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Date of Birth</div>
+						<input type="date" id="dob" class="idle"></input>
+					</div>
+					<div id="btnDiv1" class="btnDiv lfield">
+						<input type="button" id="chk1" class="fbtn" value="Next" />
+					</div>
+				</fieldset>
+				<fieldset>
+					<div id="maddr" class="">
+						<div id="" class="titleDesc">Mailing Address</div>
+						<div id="" class="lfield">
+							<div id="" class="desc">Address Line 1</div>
+							<input type="text" id="raddrl1" class="idle"></input>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc">Address Line 2</div>
+							<input type="text" id="raddrl2" class="idle"></input>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc">Landmark</div>
+							<input type="text" id="rlandmark" class="idle"></input>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc">State</div>
+							<select id="rstate" class="idle" name="">
+								<option value="Select State" disabled selected>Select
+									State</option>
+								<option value="Andaman and Nicobar Islands">Andaman and
+									Nicobar Islands</option>
+								<option value="Andhra Pradesh">Andhra Pradesh</option>
+								<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+								<option value="Assam">Assam</option>
+								<option value="Bihar">Bihar</option>
+								<option value="Chandigarh">Chandigarh</option>
+								<option value="Chhattisgarh">Chhattisgarh</option>
+								<option value="Dadra and Nagar Haveli">Dadra and Nagar
+									Haveli</option>
+								<option value="Daman and Diu">Daman and Diu</option>
+								<option value="Delhi">Delhi</option>
+								<option value="Goa">Goa</option>
+								<option value="Gujarat">Gujarat</option>
+								<option value="Haryana">Haryana</option>
+								<option value="Himachal Pradesh">Himachal Pradesh</option>
+								<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+								<option value="Jharkhand">Jharkhand</option>
+								<option value="Karnataka">Karnataka</option>
+								<option value="Kerala">Kerala</option>
+								<option value="Lakshadweep">Lakshadweep</option>
+								<option value="Madhya Pradesh">Madhya Pradesh</option>
+								<option value="Maharashtra">Maharashtra</option>
+								<option value="Manipur">Manipur</option>
+								<option value="Meghalaya">Meghalaya</option>
+								<option value="Mizoram">Mizoram</option>
+								<option value="Nagaland">Nagaland</option>
+								<option value="Orissa">Orissa</option>
+								<option value="Pondicherry">Pondicherry</option>
+								<option value="Punjab">Punjab</option>
+								<option value="Rajasthan">Rajasthan</option>
+								<option value="Sikkim">Sikkim</option>
+								<option value="Tamil Nadu">Tamil Nadu</option>
+								<option value="Tripura">Tripura</option>
+								<option value="Uttaranchal">Uttaranchal</option>
+								<option value="Uttar Pradesh">Uttar Pradesh</option>
+								<option value="West Bengal">West Bengal</option>
+							</select>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc">City</div>
+							<input type="text" id="rcity" class="idle"></input>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc">Pincode</div>
+							<input type="tel" id="rpincode" class="idle"></input>
+						</div>
+
+					</div>
+
+					<div class="dcheckbox">
+						<input type="checkbox" class="checkbox" id="checkbox1"
+							class="desc" name="" value=""> Permanent Address same as
+						Mailing Address?
+					</div>
+
+					<div id="paddr" class="">
+						<div id="" class="titleDesc">Permanent Address</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc" class="idle">Address Line 1</div>
+							<input type="text" id="paddrl1"></input>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc" class="idle">Address Line 2</div>
+							<input type="text" id="paddrl2"></input>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc" class="idle">Landmark</div>
+							<input type="text" id="plandmark"></input>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc">State</div>
+							<select id="pstate" class="idle" name="">
+								<option value="Select State" disabled selected>Select
+									State</option>
+								<option value="Andaman and Nicobar Islands">Andaman and
+									Nicobar Islands</option>
+								<option value="Andhra Pradesh">Andhra Pradesh</option>
+								<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+								<option value="Assam">Assam</option>
+								<option value="Bihar">Bihar</option>
+								<option value="Chandigarh">Chandigarh</option>
+								<option value="Chhattisgarh">Chhattisgarh</option>
+								<option value="Dadra and Nagar Haveli">Dadra and Nagar
+									Haveli</option>
+								<option value="Daman and Diu">Daman and Diu</option>
+								<option value="Delhi">Delhi</option>
+								<option value="Goa">Goa</option>
+								<option value="Gujarat">Gujarat</option>
+								<option value="Haryana">Haryana</option>
+								<option value="Himachal Pradesh">Himachal Pradesh</option>
+								<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+								<option value="Jharkhand">Jharkhand</option>
+								<option value="Karnataka">Karnataka</option>
+								<option value="Kerala">Kerala</option>
+								<option value="Lakshadweep">Lakshadweep</option>
+								<option value="Madhya Pradesh">Madhya Pradesh</option>
+								<option value="Maharashtra">Maharashtra</option>
+								<option value="Manipur">Manipur</option>
+								<option value="Meghalaya">Meghalaya</option>
+								<option value="Mizoram">Mizoram</option>
+								<option value="Nagaland">Nagaland</option>
+								<option value="Orissa">Orissa</option>
+								<option value="Pondicherry">Pondicherry</option>
+								<option value="Punjab">Punjab</option>
+								<option value="Rajasthan">Rajasthan</option>
+								<option value="Sikkim">Sikkim</option>
+								<option value="Tamil Nadu">Tamil Nadu</option>
+								<option value="Tripura">Tripura</option>
+								<option value="Uttaranchal">Uttaranchal</option>
+								<option value="Uttar Pradesh">Uttar Pradesh</option>
+								<option value="West Bengal">West Bengal</option>
+							</select>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc">City</div>
+							<input type="text" id="pcity" class="idle"></input>
+						</div>
+
+						<div id="" class="lfield">
+							<div id="" class="desc">Pincode</div>
+							<input type="tel" id="ppincode" class="idle"></input>
+						</div>
+					</div>
+
+					<div id="btnDiv2" class="btnDiv lfield">
+						<input type="button" id="btnPrev" class="pbtn" value="Prev" /> <input
+							type="button" id="chk2" class="fbtn" value="Next" />
+					</div>
+				</fieldset>
+				<fieldset>
+					<div id="" class="titleDesc">Occupation Details</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Occupation Types</div>
+						<input type="text" id="occp"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Source of Income</div>
+						<input type="text" id="srcinc"></input>
+					</div>
+
+					<div id="" class="lfield">
+						<div id="" class="desc">Gross Annual Income</div>
+						<input type="tel" id="grsinc"></input>
+					</div>
+
+					<div class="dcheckbox">
+						<input type="checkbox" id="debit" class="checkbox" name=""
+							value=""> Want a Debit Card?<br>
+					</div>
+
+					<div class="dcheckbox">
+						<input type="checkbox" id="netbanking" class="checkbox" name=""
+							value="">Opt for Net Banking<br>
+					</div>
+
+					<div class="dcheckbox">
+						<input type="checkbox" id="tAndC" class="checkbox" name=""
+							value=""> I have read and agree to the following <a
+							target="_blank" href="http://ideamensch.com/terms-and-conditions"
+							rel="nofollow noopener">Terms and conditions</a>
+					</div>
+
+					<div id="btnDiv3" class="btnDiv lfield">
+						<input type="button" id="btnPrev" class="pbtn" value="Prev" /> <input
+							type="submit" id="chk3" class="btn" value="Register">
+					</div>
+
+					<div id="" class="lfield"></div>
+
+					<div id="sess" class="desc"></div>
+
+					<div id="btnDivHome" class="lfield">
+						<input type="button" id="btn" class="btn" value="Home" />
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
 </body>
 </html>

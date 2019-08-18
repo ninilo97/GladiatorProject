@@ -64,18 +64,14 @@ $(function() {
 	})
 
 	function success() {
-		if (typeof (Storage) !== "undefined") {
-			if (sessionStorage.id) {
-			} else {
-				sessionStorage.accNo = $("#accNo").val();
-			}
-			if (sessionStorage.api) {
-				window.location.href="PaymentGateway.html";
-			} else {
-				window.location.href="Dashboard.html";
-			}
+		if (sessionStorage.accNo) {
 		} else {
-			$("sess").text("Sorry, your browser does not support web storage");
+			sessionStorage.accNo = $("#accNo").val();
+		}
+		if (sessionStorage.api == "true") {
+			window.location.href="PaymentGateway.html";
+		} else {
+			window.location.href="Dashboard.html";
 		}
 	}
 })

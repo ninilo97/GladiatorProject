@@ -14,7 +14,8 @@ public class RegisterServiceImpl implements RegisterService{
 	private GenericDao gdao;
 	
 	@Transactional
-	public void registerAccount(Account acc) {
-		gdao.save(acc);
+	public String registerAccount(Account acc) {
+		Account updatedAcc = (Account) gdao.save(acc);
+		return String.valueOf(updatedAcc.getAccNo());
 	}
 }

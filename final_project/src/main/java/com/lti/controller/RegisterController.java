@@ -15,8 +15,7 @@ public class RegisterController {
 	private RegisterService registerService;
 
 	@PostMapping("/registerAccount.lti")
-	public void registerAccount(@RequestBody Account acc) {
-		//System.out.println(acc.toString());
-		registerService.registerAccount(acc);
+	public String registerAccount(@RequestBody Account acc) {
+		return registerService.registerAccount(acc);
 	}
 }

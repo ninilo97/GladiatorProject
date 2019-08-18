@@ -27,6 +27,8 @@ $(function() {
 	var chk1;
 	var chk2;
 	var chk3;
+	
+	$("#btnDivHome").hide();
 
 	$("#title").blur(function() {
 		title = $(this).val();
@@ -723,8 +725,14 @@ $(function() {
 			data: JSON.stringify(obj),
 			contentType : 'application/json',
 			success : function(response) {
-				alert("Registration Successful");
+				$("#btnDiv3").hide();
+				$("#sess").text("Account Registration Successful. Your Account number is "+response);
+				$("#btnDivHome").show();
 			}
 		})
+	})
+	
+	$("#btnDivHome").click(function(){
+		window.location.href = 'Home.html';
 	})
 })

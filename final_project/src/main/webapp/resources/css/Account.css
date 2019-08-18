@@ -53,9 +53,9 @@ select.noerror, input.noerror {
 }
 
 .regform{
-	margin: auto;
-	width: 30%;
-	border: 1px solid darkgrey;
+	margin: 10px;
+	width: 60%;
+	border: 1px solid #0ADE77;
 	border-radius: 5px;
 	padding:14px 18px;
 }
@@ -63,6 +63,9 @@ select.noerror, input.noerror {
 .form fieldset{
     padding: 0px;
 	border : 0;
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349, #000000);
+	background: linear-gradient(to right, #156349, #000000);
 }
 .form > fieldset:not(:first-of-type) {
     display: none;
@@ -89,12 +92,14 @@ select.noerror, input.noerror {
 }
 
 .desc{
+	color:#0ADE77;
 	padding: 0px 0px 2px 0px;
 	font-size:15px;
 	font-weight:600;
 }
 
 .titleDesc{
+	color:#0ADE77;
     width: auto;
     height: auto;
     margin: 0 auto;
@@ -108,7 +113,7 @@ select.noerror, input.noerror {
 	margin-right: 20px;
 }
 
-#btnDiv{
+.btnDiv{
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -136,9 +141,9 @@ select.noerror, input.noerror {
 	
     width: 40%;
 	height: 35px;
-	border:1px #fb641b;
+	border:1px #0ADE77;
 	border-radius:2px;
-	background:#fb641b;
+	background:#0ADE77;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,.2)
 }
 
@@ -150,19 +155,93 @@ select.noerror, input.noerror {
 	
     width: 30%;
 	height: 35px;
-	border:1px #fb641b;
+	border:1px #0ADE77;
 	border-radius:2px;
-	background:#fb641b;
+	background:#0ADE77;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,.2)
 }
 
 .form .dcheckbox{
 	font-weight:600;
 	font-size:16px;
+	color: #0ADE77;
 }
 
 .form input.checkbox{
     width: 10%;
 	height: 20px;
 	border-radius:2px;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.split {
+	height: 100%;
+	width: 50%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+.container {
+	margin: 30px; padding : 20px !important;
+	height: 20%;
+	display: flex;
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349, #000000);
+	background: linear-gradient(to right, #156349, #000000);
+	padding: 20px !important;
+}
+
+.left {
+	background-color: #156349;
+}
+
+.right {
+	background-color: #156349;
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349, #000000);
+	background: linear-gradient(to right, #156349, #000000);
+}
+
+.right {
+	padding: 0px 0px 0px 0px;
+	right: 0;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.top {
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349, #000000);
+	background: linear-gradient(to right, #156349, #000000);
+}
+
+.middle {
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349, #000000);
+	background: linear-gradient(to right, #156349, #000000);
+}
+
+.bottom {
+	background: #000000;
+	background: -webkit-linear-gradient(to right, #156349, #000000);
+	background: linear-gradient(to right, #156349, #000000);
 }
