@@ -281,8 +281,9 @@ $(function() {
 	});
 
 	$("#rcity").blur(function() {
+		var reg = /^[a-zA-Z]+$/
 		rcity = $(this).val();
-		if (rcity == "") {
+		if (rcity == "" || !reg.test(rcity)) {
 			$(this).addClass("error");
 			$(this).val("Please enter a City");
 		}
@@ -320,12 +321,10 @@ $(function() {
 		$(this).removeClass("noerror");
 		$(this).val(rpincode);
 	});
-	
-	$("#checkbox1").click(test);
 
 	function test() {
 		if($(this).is(":checked")) {
-			$("#paddr").hide(200);			
+			$("#paddr").hide(200);	
 			
 			raddrl1 = $("#raddrl1").val();
 			raddrl2 = $("#raddrl2").val();
@@ -372,6 +371,8 @@ $(function() {
 			$("#ppincode").addClass("idle");
 		}
 	}
+	
+	$("#checkbox1").click(test);
 	
 	$("#paddrl1").blur(function() {
 		paddrl1 = $(this).val();
@@ -458,8 +459,9 @@ $(function() {
 	});
 
 	$("#pcity").blur(function() {
+		var reg = /^[a-zA-Z]+$/
 		pcity = $(this).val();
-		if (pcity == "") {
+		if (pcity == "" || !reg.test(pcity)) {
 			$(this).addClass("error");
 			$(this).val("Please enter a City");
 		}
@@ -670,7 +672,7 @@ $(function() {
 		else{
 			chk3=false;
 		}
-	})
+	});
 	
 	$(".form").submit(function(evt) {
 		evt.preventDefault();

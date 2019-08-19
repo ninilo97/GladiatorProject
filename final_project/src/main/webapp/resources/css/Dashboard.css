@@ -7,6 +7,16 @@ input[type=number] {
 	-moz-appearance: textfield;
 }
 
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=date] {
+  -moz-appearance: textfield;
+  padding: 1px 1px 1px 1px;
+}
+
 input{
 	text-indent : 5px;
 }
@@ -33,7 +43,7 @@ body {
 	padding-top: 50px;
 	margin: auto;
 	width: 100%;
-	height: 100%;
+	height: 60%;
 }
 
 .fundTransferElement {
@@ -41,7 +51,7 @@ body {
 	float: left;
 	margin: 20px;
 	width: 25%;
-	height: 50%;
+	height: 100%;
 	padding: 0 10px;
 	color: #0ADE77;
 	background: #000000;
@@ -91,10 +101,6 @@ li {
 	border: 2px solid #000000;
 }
 
-li:last-child {
-	border-right: none;
-}
-
 li a {
 	font-weight: 600;
 	display: block;
@@ -135,7 +141,7 @@ li a:hover, .active {
     background: linear-gradient(to right, #156349, #000000);
 }
 
-.form input{
+.form input:not([class="btn"]){
     width: 100%;
 	height: 25px;
 	border: 1px solid grey;
@@ -149,18 +155,40 @@ li a:hover, .active {
     padding: 10px;
 }
 
+#date1{
+    width: 40%;
+	height: 25px;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
+#date2{
+    width: 40%;
+	height: 25px;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
 .form .btn{
 	font-weight:600;
 	font-size:20px;
 	color:white;
     opacity:1;
 	
-    width: 100%;
+    width: 40%;
 	height: 35px;
 	border:1px #0ADE77;
 	border-radius:2px;
 	background:#0ADE77;
 	box-shadow:0 1px 2px 0 rgba(0,0,0,.2)
+}
+
+.form .lfieldD {
+	position: relative;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
 }
 
 input.error {
@@ -174,3 +202,52 @@ input.noerror {
 	border-color: #007f00 !important;
     color:#007f00;
 }
+
+#sess{
+	font-weight: 600;
+	color: #FF0000 !important;
+}
+
+table {
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	width: 100%;
+}
+
+caption{
+	padding: 5px !important;
+	background-color: rgba(255,255,255,0.5);
+}
+
+th{
+	padding: 5px !important;
+	background-color: rgba(255,255,255,0.4);
+	width: 33% !important;
+}
+
+td {
+	padding: 5px !important;
+	background-color: rgba(255,255,255,0.2);
+	width: 33% !important;
+}
+
+th {
+	text-align: left;
+}
+
+.tdesc {
+	padding: 0px 0px 2px 0px;
+	font-family: "Arial";
+	font-size: 25px;
+	font-weight: 600;
+	color: #0ADE77;
+}
+
+.tdDesc {
+	padding: 0px 0px 2px 0px;
+	font-family: "Arial";
+	font-weight: 200;
+	color: #0ADE77;
+}
+

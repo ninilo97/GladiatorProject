@@ -1,8 +1,7 @@
 package com.lti.service;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -10,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.lti.dao.GenericDao;
+import com.lti.dao.OAccountDao;
 import com.lti.dto.Transfer;
 import com.lti.entity.Account;
 import com.lti.entity.OAccount;
@@ -20,6 +20,9 @@ public class OAccountServiceImpl implements OAccountService {
 
 	@Autowired
 	private GenericDao gdao;
+	
+	@Autowired
+	private OAccountDao dao;
 
 	@Transactional
 	public void saveOAccount(OAccount oacc) {
@@ -30,6 +33,19 @@ public class OAccountServiceImpl implements OAccountService {
 		return gdao.fetchById(Account.class, accNo);
 	}
 
+	public OAccount fetchByOAccountFid(int accNo) {
+		return dao.fetchByOAccountFid(accNo);
+	}
+	
+	@Transactional
+	public void delete(OAccount oAccount) {
+		gdao.delete(oAccount);
+	}
+	
+	public List<TransactionEntity> fetchTx(int accNo) {
+		return dao.fetchTx(accNo);
+	}
+	
 	@SuppressWarnings("finally")
 	@Transactional
 	public boolean transfer(Transfer transfer) {
@@ -52,7 +68,6 @@ public class OAccountServiceImpl implements OAccountService {
 
 			LocalDateTime dateTime = LocalDateTime.now();
 			
-			System.out.println(dateTime);
 			tx.setTxDetails("Money send to " + toAccount.getFirstName());
 			tx.setTxDate(dateTime);
 			tx.setTxType("Withdraw");
@@ -61,7 +76,7 @@ public class OAccountServiceImpl implements OAccountService {
 			tx.setAccount(fromAccount);
 			gdao.save(tx);
 
-			tx.setTxDetails("Money recieved from " + fromAccount.getFirstName());
+			tx.setTxDetails("Money received from " + fromAccount.getFirstName());
 			tx.setTxDate(dateTime);
 			tx.setTxType("Deposit");
 			tx.setTxAmount(Integer.toString(amount));

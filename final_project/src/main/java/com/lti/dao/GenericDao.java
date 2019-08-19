@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class GenericDao {
-
 	@PersistenceContext
 	protected EntityManager entityManager;
 

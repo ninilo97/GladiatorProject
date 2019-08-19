@@ -13,7 +13,7 @@ $(function() {
 		success : function(response) {
 			$.each(response, function(index, element) {
 				$('#toAccNo').append(
-						$("<option></option>").attr("value", element.payaccno).text(element.payname));
+						$("<option></option>").attr("value", element.payaccno).text(element.paynn));
 			})
 		}
 	})

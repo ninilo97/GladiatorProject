@@ -2,6 +2,7 @@ $(function() {
 	var otp;
 
 	var sotp = Math.floor(100000 + Math.random() * 900000)
+	console.log(sotp);
 	var obj1 = {
 		accNo : sessionStorage.accNo
 	}
@@ -15,7 +16,6 @@ $(function() {
 				sendSMS : sotp,
 				sendTo : response
 			}
-			console.log(sotp);
 			$.ajax({
 				url : 'sendSMS.lti',
 				method : 'POST',
@@ -70,8 +70,7 @@ $(function() {
 				}
 			})
 		} else {
-			setTimeout(function(){ window.location.reload(); }, 2500);
-			$("#disError").text("Incorrect OTP. Reloading page...");
+			$("#disError").text("Incorrect OTP. Try again.");
 		}
 	})
 })

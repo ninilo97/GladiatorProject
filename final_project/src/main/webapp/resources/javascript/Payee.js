@@ -99,10 +99,7 @@ $(function() {
 			success : function(response) {
 				if(response==true){
 					$("#sess").text("Payee added successfully");
-					window.location.href='Dashboard.html'
-					setTimeout(function() {
-						  window.location.href = "/NewPage.aspx";
-						}, 2000);
+					setTimeout(function() { window.location.href='Dashboard.html'; }, 2000);
 				}
 			}
 		})

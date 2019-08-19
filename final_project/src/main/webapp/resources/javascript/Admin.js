@@ -49,7 +49,6 @@ $(function() {
 						method : 'POST',
 						contentType : 'application/json',
 						success : function(response) {
-							// alert(JSON.stringify(response));
 							emptyTable();
 							$.each(response, function(index, element) {
 								if (element.appr == "1") return;

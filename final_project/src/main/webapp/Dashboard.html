@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Dashboard</title>
 
 <link rel="stylesheet" href="resources/css/Dashboard.css" />
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -12,7 +12,7 @@
 <body>
 	<div id="" class="lfield">
 		<ul>
-			<li><a id="accSumm" class="active">Account Summary</a></li>
+			<li><a id="accSumm" class="">Account Summary</a></li>
 			<li><a id="accDetails" class="">Account Details</a></li>
 			<li><a id="accStatement" class="">Account Statement</a></li>
 			<li><a id="accTransfer" class="">Fund Transfer</a></li>
@@ -21,9 +21,55 @@
 		</ul>
 	</div>
 	<div id="loadDiv" class="hide">
-		<div id="accSummD" class="container"></div>
+		<div id="accSummD" class="container hidden">
+			<div class="split left">
+				<div class="centered">
+					<img src="resources/images/logo.JPG" alt="Logo">
+				</div>
+			</div>
+			<div class="split right">
+				<div id="" class="lfield">
+					<div id="accSummD1" class="titleDesc"></div>
+				</div>
+				<div id="" class="lfield">
+					<div id="accSummD2" class="titleDesc"></div>
+				</div>
+				<div id="" class="lfield">
+					<div id="accSummD3" class="titleDesc"></div>
+				</div>
+				<table id="txTable">
+					<caption class="tdesc">Last Five Transaction</caption>
+					<thead>
+						<tr>
+							<th class="tdesc">TX Details</th>
+							<th class="tdesc">Amount</th>
+							<th class="tdesc">Balance</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
 		<div id="accDetailsD" class="container hidden"></div>
-		<div id="accStatementD" class="container hidden"></div>
+		<div id="accStatementD" class="container hidden">
+			<div id="" class="lfieldD">
+				<form class="form">
+					<div id="" class="lfield">
+						<div id="" class="desc">To Date</div>
+						<input type="date" id="date1" class=""></input>
+					</div>
+					<div id="" class="lfield">
+						<div id="" class="desc">From Date</div>
+						<input type="date" id="date2" class=""></input>
+					</div>
+					<div id="" class="lfield">
+						<input type="submit" id="chk" class="btn"></input>
+					</div>
+				</form>
+			</div>
+			<div id="" class="lfieldD"></div>
+		</div>
 		<div id="accTransferD" class="container hidden">
 			<div id="payee" class="fundTransferElement">
 				<div id="" class="elements">Add Payee</div>
@@ -32,7 +78,7 @@
 				<div id="" class="elements">Transfer Funds</div>
 			</div>
 		</div>
-		<div id="accPassD" class="hidden">
+		<div id="accPassD" class="dummy hidden">
 			<div class="regform">
 				<form class="form">
 					<fieldset>
@@ -51,16 +97,16 @@
 						</div>
 
 						<div id="" class="lfield">
-							<div id="" class="desc">Confirm Trnsaction Password</div>
+							<div id="" class="desc">Confirm Transaction Password</div>
 							<input type="password" name="password" id="ctxPass"></input>
 						</div>
 
 						<div id="sess" class="lfield"></div>
-						
+
 						<div id="" class="lfield">
-							<input type="submit" id="changeForm" value="Submit" class="btn"/>
+							<input type="submit" id="changeForm" value="Submit" class="btn" />
 						</div>
-					<fieldset>
+						<fieldset>
 				</form>
 			</div>
 		</div>

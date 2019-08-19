@@ -41,6 +41,19 @@ $(function() {
 		$(this).val(password);
 	});
 	
+	$("#rd1").click(function(evt) {
+		evt.preventDefault();
+		setTimeout(function() {window.location.href = 'Account.html';}, 500);
+	})
+	$("#rd2").click(function(evt) {
+		evt.preventDefault();
+		//setTimeout(function() {window.location.href = 'Home.html';}, 500);
+	})
+	$("#rd3").click(function(evt) {
+		evt.preventDefault();
+		setTimeout(function() {window.location.href = 'ForgotPass.html';}, 500);
+	})
+	
 	$(".form").submit(function(evt) {
 		evt.preventDefault();
 		var obj = {

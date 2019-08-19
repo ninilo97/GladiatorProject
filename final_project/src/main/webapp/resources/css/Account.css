@@ -79,7 +79,7 @@ select.noerror, input.noerror {
 }
 
 .form input:not([class="fbtn"]):not([class="pbtn"]):not([class="btn"]):not([class="checkbox"]){
-    width: 100%;
+    width: 40%;
 	height: 25px;
 	border: 1px solid grey;
 	border-radius: 3px;

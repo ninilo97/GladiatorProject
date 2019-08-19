@@ -17,7 +17,6 @@ public class LoginController {
 
 	@PostMapping("/Login.lti")
 	public boolean checkPassword(@RequestBody Login login) {
-		System.out.println(login.toString());
 		OAccount oAccount = loginService.getOAccountById(login.getAccNo());
 		if (oAccount.getPass().equals(login.getPassword())) {
 			return true;
