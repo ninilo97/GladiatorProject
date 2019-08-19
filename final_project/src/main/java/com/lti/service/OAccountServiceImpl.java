@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.lti.dao.GenericDao;
 import com.lti.dao.OAccountDao;
+import com.lti.dto.DateRange;
 import com.lti.dto.Transfer;
 import com.lti.entity.Account;
 import com.lti.entity.OAccount;
@@ -44,6 +45,10 @@ public class OAccountServiceImpl implements OAccountService {
 	
 	public List<TransactionEntity> fetchTx(int accNo) {
 		return dao.fetchTx(accNo);
+	}
+	
+	public List<TransactionEntity> fetchTxDate(DateRange dateRange) {
+		return dao.fetchTxDate(dateRange);
 	}
 	
 	@SuppressWarnings("finally")

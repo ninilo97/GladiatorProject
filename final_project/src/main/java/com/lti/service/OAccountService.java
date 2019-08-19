@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.lti.dto.DateRange;
 import com.lti.dto.Transfer;
 import com.lti.entity.Account;
 import com.lti.entity.OAccount;
@@ -16,5 +17,6 @@ public interface OAccountService {
 	public OAccount fetchByOAccountFid(int accNo);
 	public Account fetchAccountById(int accNo);
 	public List<TransactionEntity> fetchTx(int accNo);
+	public List<TransactionEntity> fetchTxDate(DateRange dateRange);
 	public boolean transfer(Transfer transfer);
 }

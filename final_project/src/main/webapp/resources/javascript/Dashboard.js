@@ -225,6 +225,7 @@ $(function() {
 	});	
 	
 	$("#date1").focus(function() {
+		$("#sess1").text("");
 		$(this).removeClass("idle");
 		$(this).removeClass("error");
 		$(this).removeClass("noerror");
@@ -241,16 +242,17 @@ $(function() {
 	});	
 	
 	$("#date2").focus(function() {
+		$("#sess1").text("");
 		$(this).removeClass("idle");
 		$(this).removeClass("error");
 		$(this).removeClass("noerror");
 	});
 
 	$("#chk").click(function(){
-		date1 = $(this).val();
-		date2 = $(this).val();
+		date1 = $("#date1").val();
+		date2 = $("#date2").val();
 		if(date1>date2){
-			$("#sess").text()
+			$("#sess1").text("Invalid Date Range");
 			return false;
 		}
 		
@@ -265,8 +267,25 @@ $(function() {
 		}
 	})
 	
-	$("#chk").click(function(){
+	$("#chk").click(function(evt){
+		evt.preventDefault();
 		if(chk == false) return false;
+
+
+		var obj = {
+			accNo : sessionStorage.accNo,
+			date1 : $("#date1").val(),
+			date2 : $("#date2").val()
+		}
 		
+		$.ajax({
+			url : 'OAccountTxDate.lti',
+			method : 'POST',
+			data: JSON.stringify(obj),
+			contentType : 'application/json',
+			success : function(response) {
+				
+			}
+		})
 	})
 });
